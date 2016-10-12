@@ -1,1 +1,1 @@
-D:\VS\SPAddinTest\SPAddinTest\bin\Debug\EmployeeOrientation.debugapp
+D:\VS\SharepointAddin\SPAddinTest\bin\Debug\EmployeeOrientation.debugapp

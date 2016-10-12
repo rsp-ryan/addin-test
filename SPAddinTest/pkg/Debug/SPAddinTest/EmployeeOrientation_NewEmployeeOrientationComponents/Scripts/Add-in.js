@@ -1,67 +1,69 @@
 ﻿'use strict';
 
+// List操作のために必要なオブジェクト取得に使う変数
 var clientContext;
 var employeeList;
 var myItems;
 var notStartedItems;
-var calendarList;
-var scheduledItems;
-var hostWebURL;
-//var hostWebURL = decodeURIComponent(getQueryStringParameter("SPHostUrl"));
 
-var clockedIn;
-var clockedOut;
-
+// まずSharepointの基盤となるsp.jsをロードした上に、初期化ファンクション（SharePointReady）を呼び出す
 SP.SOD.executeFunc('sp.js', 'SP.ClientContext', sharePointReady);
 
-// クロックイン
+
 
 var siteUrl = '/sites/MySiteCollection';
 
-
+// 打刻成功
 function onQuerySucceeded() {
 
     alert('打刻しました。');
 }
 
+// 打刻失敗
 function onQueryFailed() {
 
     
 }
 
+// 出勤打刻ファンクション
 function clockinDaily() {
 
     
-
+    // 日報List取得
     var oList = clientContext.get_web().get_lists().getByTitle('Daily Reports');
+
     var d = new Date();
     var itemCreateInfo = new SP.ListItemCreationInformation();
     var oListItem = oList.addItem(itemCreateInfo);
 
+    // 各種入力値設定
     oListItem.set_item('Reporter', _spPageContextInfo.userId );
     oListItem.set_item('WorkDate', d);
     oListItem.set_item('InMinute', (d.getHours() * 60 + d.getMinutes()) );
 
+
+    // レコード更新後、非同期でListに更新をかける
     oListItem.update();
-
     clientContext.load(oListItem);
-
     clientContext.executeQueryAsync(onQuerySucceeded, onQueryFailed);
 }
 
+// 退勤打刻ファンクション
 function clockoutDaily() {
 
     var camlQuery = new SP.CamlQuery();
     var d = new Date();
     var todayDate = getDateStr(d);
     
+    // CAMLクエリで本日のレコード、かつ自分のUserIDで登録されているレコードをGET
     var camlXML = "<View><Query><Where><And><Eq><FieldRef Name='Reporter' LookupId='True'/><Value Type='Lookup'>" + _spPageContextInfo.userId + "</Value></Eq><And><Geq><FieldRef Name='WorkDate'/><Value Type='DateTime'>" + todayDate + " 00:00:00</Value></Geq><Leq><FieldRef Name='WorkDate'/><Value Type='DateTime'>" + todayDate + " 23:59:59</Value></Leq></And></And></Where></Query></View>";
 
+    // DefaultページのASP.NETフォームから入力値を取得し、セット
     var outComment = $("textarea[id$=commentbox]").val();
     var outBreak = parseInt($("input[id$=breaktimebox]").val());
     var outSentiment = $("select[id$=sentiment]").val();
     
-
+    // 入力値バリデーション
     if (outComment.length < 20) {
         alert("感想は10文字以上で入力してください");
         return false;
@@ -79,6 +81,9 @@ function clockoutDaily() {
     clientContext.executeQueryAsync(function () {
     var enumerator = myItems.getEnumerator();
     var itemCount = myItems.get_count();
+
+        // 取得したレコードセットに対して退勤時間・コメントその他値を更新
+        // 本来はこの日のレコードは１件のみのはずだが、全部に対して順に更新している
     while (enumerator.moveNext()) {
         var item = enumerator.get_current();
         item.set_item('OutMinute', (d.getHours()*60 + d.getMinutes()));
@@ -91,183 +96,16 @@ function clockoutDaily() {
     }
 
 
-   //         var comment = $("#commentbox").val();
-//
-  //          alert(comment);
-
-    //        item.set_item('ClockOutTime', d);
-      //      item.set_item('Comment', comment)
-      //          item.update();
-      //          clientContext.load(item);
-      //          clientContext.executeQueryAsync(onQuerySucceeded, onQueryFailed);
-                
-      //      }
-            
-        
-        
-        
-
        
     },
+    // クエリ失敗の場合
       function (s, a) {
        alert("NOTHING FOUND");
-     });
+      });
+    // 最後にページをリロード
    window.location.reload();
 }
 
-
-
-
-   // var camlQuery = new SP.CamlQuery();
-  //  var camlXML = "<View><Query><Where><Eq><FieldRef Name='Reporter' LookupId='True'/><Value Type='Lookup'>" + _spPageContextInfo.userId + "</Value></Eq></Where></Query></View>";
-
-//    camlQuery.set_viewXml(camlXML);
-//    myItems = employeeList.getItems(camlQuery);
- //   clientContext.load(myItems);
-
- //   clientContext.executeQueryAsync(function () {
-  //      var enumerator = myItems.getEnumerator();
-   //     while (enumerator.moveNext()) {
-     //           var item = enumerator.get_current().get_item('ClockInTime');
-    //            alert("Clock-in time is " + item);
-    //        }
-       
-  //  },
-     //   function (s, a) {
-       //     alert("NOTHING FOUND");
-   //     });
-
-    
-
-
-function deleteCompletedItems() {
-
-    var itemArray = new Array();
-    var listItemEnumerator = completedItems.getEnumerator();
-
-    while (listItemEnumerator.moveNext()) {
-        var item = listItemEnumerator.get_current();
-        itemArray.push(item);
-    }
-
-    var i;
-    for (i = 0; i < itemArray.length; i++) {
-        employeeList.getItemById(itemArray[i].get_id()).deleteObject();
-    }
-
-    clientContext.executeQueryAsync(onDeleteCompletedItemsSuccess, onDeleteCompletedItemsFail);
-}
-
-function onDeleteCompletedItemsSuccess() {
-    alert('Completed orientations have been deleted.');
-    location.reload(true);
-}
-
-function ensureOrientationScheduling() {
-
-    var camlQuery = new SP.CamlQuery();
-    camlQuery.set_viewXml(
-        '<View><Query><Where><Eq>' +
-            '<FieldRef Name=\'OrientationStage\'/><Value Type=\'Choice\'>Not started</Value>' +
-        '</Eq></Where></Query></View>');
-    notStartedItems = employeeList.getItems(camlQuery);
-
-    clientContext.load(notStartedItems);
-    clientContext.executeQueryAsync(getScheduledOrientations, onGetNotStartedItemsFail);
-    return false;
-}
-
-function getScheduledOrientations() {
-
-    var hostWebContext = new SP.AppContextSite(clientContext, hostWebURL);
-    calendarList = hostWebContext.get_web().get_lists().getByTitle('Employee Orientation Schedule');
-
-    var camlQuery = new SP.CamlQuery();
-    scheduledItems = calendarList.getItems(camlQuery);
-
-    clientContext.load(scheduledItems);
-    clientContext.executeQueryAsync(scheduleAsNeeded, onGetScheduledItemsFail);
-}
-
-function scheduleAsNeeded() {
-
-    var unscheduledItems = false;
-    var dayOfMonth = '10';
-
-    var listItemEnumerator = notStartedItems.getEnumerator();
-
-    while (listItemEnumerator.moveNext()) {
-        var alreadyScheduled = false;
-        var notStartedItem = listItemEnumerator.get_current();
-
-        var calendarEventEnumerator = scheduledItems.getEnumerator();
-        while (calendarEventEnumerator.moveNext()) {
-            var scheduledEvent = calendarEventEnumerator.get_current();
-
-            // The SP.ListItem.get_item('field_name') method gets the value of the specified field.
-            if (scheduledEvent.get_item('Title').indexOf(notStartedItem.get_item('Title')) > -1) {
-                alreadyScheduled = true;
-                break;
-            }
-        }
-        if (alreadyScheduled === false) {
-
-            // SP.ListItemCreationInformation holds the information the SharePoint server needs to
-            // create a list item
-            var calendarItem = new SP.ListItemCreationInformation();
-
-            // The some_list.additem method tells the server which list to add 
-            // the item to.
-            var itemToCreate = calendarList.addItem(calendarItem);
-
-            // The some_item.set_item method sets the value of the specified field.
-            itemToCreate.set_item('Title', 'Orient ' + notStartedItem.get_item('Title'));
-
-            // The EventDate and EndDate are the start and stop times of an event.
-            itemToCreate.set_item('EventDate', '2016-10-' + dayOfMonth + 'T21:00:00Z');
-            itemToCreate.set_item('EndDate', '2016-10-' + dayOfMonth + 'T23:00:00Z');
-            dayOfMonth++;
-
-            // The update method tells the server to commit the changes to the SharePoint database.
-            itemToCreate.update();
-            unscheduledItems = true;
-        }
-    }
-    if (unscheduledItems) {
-        calendarList.update();
-        clientContext.executeQueryAsync(onScheduleItemsSuccess, onScheduleItemsFail);
-    }
-}
-
-function onScheduleItemsSuccess() {
-    alert('There was one or more unscheduled orientations and they have been added to the '
-              + 'Employee Orientation Schedule calendar.');
-}
-
-function onGetNotStartedItemsFail(sender, args) {
-    alert('Unable to get the not-started items. Error:'
-        + args.get_message() + '\n' + args.get_stackTrace());
-}
-
-function onGetScheduledItemsFail(sender, args) {
-    alert('Unable to get scheduled items from host web. Error:'
-        + args.get_message() + '\n' + args.get_stackTrace());
-}
-
-function onScheduleItemsFail(sender, args) {
-    alert('Unable to schedule items on host web calendar. Error:'
-        + args.get_message() + '\n' + args.get_stackTrace());
-}
-
-// Failure callbacks
-
-function onGetCompletedItemsFail(sender, args) {
-    alert('Unable to get completed items. Error:' + args.get_message() + '\n' + args.get_stackTrace());
-}
-
-function onDeleteCompletedItemsFail(sender, args) {
-    alert('Unable to delete completed items. Error:' + args.get_message() + '\n' + args.get_stackTrace());
-}
 
 // Utility functions
 
@@ -282,6 +120,7 @@ function getQueryStringParameter(paramToRetrieve) {
     }
 }
 
+// DateTime型をもらって、日付のStringにして返す
 function getDateStr(dateParam) {
 
     var dd = dateParam.getDate();
@@ -298,6 +137,7 @@ function getDateStr(dateParam) {
     return returnDateStr;
 }
 
+// 00:00から何分経ったかの数字をもらって、時刻のStringにして返す
 function getTimeStr(minuteParam) {
 
     var hhh = Math.floor(minuteParam / 60);
@@ -316,14 +156,12 @@ function getTimeStr(minuteParam) {
     return returnTimeStr;
 }
 
-
+// 初期化ファンクション。ページをロードするとまず動く
+// 日報の表を更新したり、ボタンを有効か無効かしたりする
 function sharePointReady() {
 
-
+    // まずクロックアウトは無効化しておく
     $("#clockoutbutton").prop('disabled', true);
-
-    clockedIn = false;
-    clockedOut = false;
 
     clientContext = SP.ClientContext.get_current();
     employeeList = clientContext.get_web().get_lists().getByTitle('Daily Reports');
@@ -340,6 +178,8 @@ function sharePointReady() {
 
     var dateArray = new Array(8);
 
+    // 直近7日間の日付をdateArrayの配列に格納しつつ、表に更新
+    // 土曜日なら青色、日曜日なら赤色に設定し、jQueryでdivを更新していく
     for (var i = 1 ; i <= 7 ; i++) {
         
         iDate = new Date(d.getTime() - ((7-i)  * 24 * 60 * 60 * 1000));
@@ -358,8 +198,7 @@ function sharePointReady() {
 
        }
     
-
-
+    // 直近7日間の日報レコードを取得するCAMLクエリ
     camlXML = "<View><Query><Where><And><Eq><FieldRef Name='Reporter' LookupId='True'/><Value Type='Lookup'>" + _spPageContextInfo.userId + "</Value></Eq><And><Geq><FieldRef Name='WorkDate'/><Value Type='DateTime'>" + dateStr + " 00:00:00</Value></Geq><Leq><FieldRef Name='WorkDate'/><Value Type='DateTime'>" + todayDate + " 23:59:59</Value></Leq></And></And></Where></Query></View>";
         
         camlQuery.set_viewXml(camlXML);
@@ -371,7 +210,7 @@ function sharePointReady() {
         clientContext.executeQueryAsync(function () {
             var enumerator = myItems.getEnumerator();
             var itemCount = myItems.get_count();
-            
+
             var itemWorkDate;
             var itemInMinute;
             var itemOutMinute;
@@ -379,43 +218,41 @@ function sharePointReady() {
             var itemWorkHour;
             var itemComment;
             var itemSentiment;
-            
+
             var commentStr;
-            
 
 
+            // レコードを順になめながら表に更新していく
             if (itemCount > 0) {
                 while (enumerator.moveNext()) {
 
-            
+
                     itemWorkDate = enumerator.get_current().get_item('WorkDate');
                     itemInMinute = enumerator.get_current().get_item('InMinute');
                     itemBreakMinute = enumerator.get_current().get_item('BreakMinute');
                     itemOutMinute = enumerator.get_current().get_item('OutMinute');
 
-                    
-
                     itemComment = enumerator.get_current().get_item('Comment');
                     itemSentiment = enumerator.get_current().get_item('Sentiment');
 
-                    
+                    // 配列の日付と比較し、表のどの行に表示するか決める
                     for (var i = 1 ; i <= 7 ; i++) {
                         if (getDateStr(itemWorkDate) == dateArray[i]) {
-                        
+
 
                             if (itemComment) {
                                 commentStr = itemComment.toString().substring(0, 16) + "..";
                                 $("#reportComment" + i).html(commentStr);
                             }
-                            
+
                             if (itemInMinute) {
                                 $("#reportClockIn" + i).html(getTimeStr(itemInMinute));
                             }
-                            
+
                             if (itemOutMinute) {
                                 $("#reportClockOut" + i).html(getTimeStr(itemOutMinute));
                             }
-                            
+
                             if ((itemInMinute) && (itemOutMinute)) {
                                 itemWorkHour = Math.floor(((itemOutMinute - itemInMinute - itemBreakMinute) / 60 * 100)) / 100;
                                 if (itemWorkHour < 0) {
@@ -426,43 +263,29 @@ function sharePointReady() {
 
                             if (itemBreakMinute) {
                                 $("#reportBreakTime" + i).html(itemBreakMinute);
-                            }                          
-                            
+                            }
+
                             if (itemSentiment) {
                                 $("#reportSentiment" + i).html(itemSentiment);
                             }
 
-                            if (i==7) {
+                            // 本日の日報がある場合、クロックインしているか、クロックアウトしているかを確認し
+                            // それに合わせて打刻ボタンを有効化したり無効化する
+                            if (i == 7) {
                                 if (itemInMinute) {
                                     $("#clockinbutton").prop('disabled', true);
                                     if (!itemOutMinute) {
                                         $("#clockoutbutton").prop('disabled', false);
                                     }
-              //                      $("#clockin").html("<img src='../Images/clockin_inactive.png'>");
                                 }
-       //                         if (itemOutMinute) {
-         //                           $("#clockoutbutton").attr('disabled', 'disabled');
-                                  //  html("<img src='../Images/clockout_inactive.png'>");
-           //                     }
-
                             }
-                                
-
-                                
-                            }
-                            
-
                         }
                     }
                 }
-            
+            }
         },
+    　　// クエリ失敗の場合
         function (s, a) {
             alert("ERROR retrieving daily report" + a.get_message() + a.get_stackTrace());
         });
-
-  //  }
-
-    
-
 }

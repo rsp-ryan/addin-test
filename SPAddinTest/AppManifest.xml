@@ -15,8 +15,5 @@
     <Internal />
   </AppPrincipal>
   <AppPermissionRequests>
-    <AppPermissionRequest Scope="http://sharepoint/content/sitecollection/web/list" Right="Manage" >
-      <Property Name="BaseTemplateId" Value="106" />
-    </AppPermissionRequest>
   </AppPermissionRequests>
 </App>

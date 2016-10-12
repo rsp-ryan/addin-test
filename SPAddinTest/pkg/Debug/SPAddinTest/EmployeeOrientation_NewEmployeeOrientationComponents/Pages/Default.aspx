@@ -21,13 +21,14 @@
 
 <%-- The markup in the following Content element will be placed in the TitleArea of the page --%>
 <asp:Content ContentPlaceHolderID="PlaceHolderPageTitleInTitleArea" runat="server">
+ <!-- ページタイトルの部分。会社ロゴを挿入 -->
     <img src="../Images/RSP_logo.jpg"/>
     
 </asp:Content>
 
 <%-- The markup and script in the following Content element will be placed in the <body> of the page --%>
 <asp:Content ContentPlaceHolderID="PlaceHolderMain" runat="server">
-
+ <!-- トップのメインナビゲーションメニュー -->
    <br />
     <br />
     <br />
@@ -42,6 +43,7 @@
     </table>
     <br /> 
         
+ <!-- 直近7日間の勤怠記録を表示するための表 -->
         <table border="0" width="690" cellspacing="0" cellpadding="5" bordercolor="#333333">
 <tr>
 <th bgcolor="#FF8000"><font color="#FFFFFF">日付</font></th>
@@ -123,10 +125,12 @@
     <table border="0" width="400" cellspacing="0" cellpadding="5" bordercolor="#333333">
 <th></th>
 <tr>
+    <!--　クロックインボタン -->
     <td ><div id="clockin"><asp:Button id="clockinbutton" ClientIDMode="Static" Text="出勤打刻"
   ForeColor="#cc3300" Font-Size="Large" Font-Bold="true" Height="40" OnClientClick="return clockinDaily()" runat="server" />
         
     </div> </td>
+    <!-- クロックアウトボタン -->
     <td >    <div id="clockout">
     <asp:Button id="clockoutbutton" ClientIDMode="Static" Text="退勤打刻" 
   ForeColor="#0066cc" Font-Size="Large" Font-Bold="true" Height="40"　OnClientClick="return clockoutDaily()" runat="server" />
@@ -135,7 +139,7 @@
 </tr>
         </table>
 
-
+    <!-- 以下、クロックアウトのための入力欄（感想、休憩時間、気持ち -->
     <br />
     <br />
     本日の感想<br />
@@ -151,9 +155,11 @@
         <asp:ListItem Value="絶好調">絶好調</asp:ListItem>
     </asp:DropDownList>
     <br />
+    <!-- ヘルプのリンク　-->
     <p><asp:HyperLink runat="server" NavigateUrl="JavaScript:window.location = _spPageContextInfo.webAbsoluteUrl + '/Pages/Help.aspx';" 
     Text="ヘルプ：使用方法はこちら" /></p>
     
+    <!-- リストの直接閲覧のためのリンク -->
 <p><asp:HyperLink runat="server" NavigateUrl="JavaScript:window.location = _spPageContextInfo.webAbsoluteUrl + '/Lists/NewEmployeesInSeattle/AllItems.aspx';" 
-    Text="List View Page for New Employees in Seattle" /></p>
+    Text="リストの中身を直接見る" /></p>
 </asp:Content>

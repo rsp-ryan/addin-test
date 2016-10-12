@@ -16,7 +16,7 @@
       
     <Field ID="{c516ffb6-9432-4111-af58-59cbbd9e781b}" Name="Reporter" DisplayName="Reporter" Type="User" Required="FALSE" Group="Employee Orientation" List="UserInfo"></Field>
       <Field ID="{0f444d44-7a01-4acc-bd61-4f8683800dcb}" Name="Comment" DisplayName="Comment" Type="Note" Required="FALSE" Group="Employee Orientation"></Field>
-      <Field ID="{9f9cf281-51e4-486d-9936-50ae6e508d01}" Name="Sentiment" Title="Sentiment" DisplayName="Sentiment" Group="Employee Orientation" Description="The current orientation stage of the employee." Type="Choice" Required="TRUE" JSLink="~site/Scripts/OrientationStageRendering.js">
+      <Field ID="{9f9cf281-51e4-486d-9936-50ae6e508d01}" Name="Sentiment" Title="Sentiment" DisplayName="Sentiment" Group="Employee Orientation" Description="The current orientation stage of the employee." Type="Choice" Required="TRUE" >
         <CHOICES>
           
           

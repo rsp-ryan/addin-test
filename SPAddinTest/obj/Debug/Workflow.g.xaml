@@ -98,7 +98,7 @@
           <TerminateWorkflow Reason="Not at HR paperwork stage." />
         </If.Else>
       </If>
-      <sads:DebugSymbol.Symbol>9xDo0qkZHYzpR+j7bJJQfRfrP0Q6XFZTXFNQQWRkaW5UZXN0XFNQQWRkaW5UZXN0XFdvcmtmbG93c1xIUl9JbnRha2VcV29ya2Zsb3cueGFtbBMpA3EOAgEBLwVDGwIBI0QFUhwCARZTBW8KAgECOQs7KAIBKUALQFsCASUyCzQoAgEkTAtMYQIBH0cLR1MCARtPC09WAgEXVgtWagIBA1oJahQCAQltCW14AgEHOg06JAMBKQEzDTMkAwEkAWcPZ7YBAgESXQ9dmgECAQ5iD2JxAgEKbVltdQIBCA==</sads:DebugSymbol.Symbol>
+      <sads:DebugSymbol.Symbol>9xDo0qkZHYzpR+j7bJJQfRfrQ0Q6XFZTXFNoYXJlcG9pbnRBZGRpblxTUEFkZGluVGVzdFxXb3JrZmxvd3NcSFJfSW50YWtlXFdvcmtmbG93LnhhbWwTKQNxDgIBAS8FQxsCASNEBVIcAgEWUwVvCgIBAjkLOygCASlAC0BbAgElMgs0KAIBJEwLTGECAR9HC0dTAgEbTwtPVgIBF1YLVmoCAQNaCWoUAgEJbQlteAIBBzoNOiQDASkBMw0zJAMBJAFnD2e2AQIBEl0PXZoBAgEOYg9icQIBCm1ZbXUCAQg=</sads:DebugSymbol.Symbol>
     </Sequence>
   </swh:Workflow.Implementation>
 </swh:Workflow>

@@ -2,8 +2,8 @@
 <TranslatedWorkflowsFileMap xmlns:i="http://www.w3.org/2001/XMLSchema-instance" xmlns="http://schemas.datacontract.org/2004/07/Microsoft.Workflow.Service.Build">
   <fileMap xmlns:d2p1="http://schemas.microsoft.com/2003/10/Serialization/Arrays">
     <d2p1:KeyValueOfstringstring>
-      <d2p1:Key>D:\VS\SPAddinTest\SPAddinTest\Workflows\HR_Intake\Workflow.xaml</d2p1:Key>
-      <d2p1:Value>D:\VS\SPAddinTest\SPAddinTest\bin\Debug\TranslatedWorkflows\ceoru5ju.p2a.xaml</d2p1:Value>
+      <d2p1:Key>D:\VS\SharepointAddin\SPAddinTest\Workflows\HR_Intake\Workflow.xaml</d2p1:Key>
+      <d2p1:Value>D:\VS\SharepointAddin\SPAddinTest\bin\Debug\TranslatedWorkflows\iicly1wk.yav.xaml</d2p1:Value>
     </d2p1:KeyValueOfstringstring>
   </fileMap>
 </TranslatedWorkflowsFileMap>

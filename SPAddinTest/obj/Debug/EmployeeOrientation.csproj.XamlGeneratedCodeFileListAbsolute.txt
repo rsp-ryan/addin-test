@@ -1,5 +1,5 @@
 obj\Debug\_SPAddinTest.g.cs
 obj\Debug\Workflow.g.cs
 obj\Debug\SPAddinTest.Workflows.HR_Intake_Workflow_BeforeInitializeComponentHelper.cs
-obj\Debug\_AssemblyInfo_90ba8e59f9324bd4a3a779c30762afec.g.cs
-D:\VS\SPAddinTest\SPAddinTest\obj\Debug\SPAddinTest.Workflows.HR_Intake_Workflow_CompiledExpressionRoot.cs
+obj\Debug\_AssemblyInfo_2a129617b7a341ad891407a0977aab56.g.cs
+D:\VS\SharepointAddin\SPAddinTest\obj\Debug\SPAddinTest.Workflows.HR_Intake_Workflow_CompiledExpressionRoot.cs

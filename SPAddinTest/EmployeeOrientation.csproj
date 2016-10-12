@@ -46,10 +46,6 @@
     <Content Include="Content Types\NewEmployee\Elements.xml">
       <SubType>Designer</SubType>
     </Content>
-    <Content Include="Images\clockin_active.png" />
-    <Content Include="Images\clockin_inactive.png" />
-    <Content Include="Images\clockout_active.png" />
-    <Content Include="Images\clockout_inactive.png" />
     <Content Include="Images\RSP_logo.jpg" />
     <Content Include="Pages\Approval.aspx" />
     <Content Include="Pages\Help.aspx" />
@@ -59,7 +55,6 @@
     <Content Include="RunOrientationAdd-in\Elements.xml">
       <OpcRelationship>feature-elementmanifest</OpcRelationship>
     </Content>
-    <Content Include="Scripts\OrientationStageRendering.js" />
     <Content Include="Site Columns\BreakMinute\Elements.xml">
       <SubType>Designer</SubType>
     </Content>

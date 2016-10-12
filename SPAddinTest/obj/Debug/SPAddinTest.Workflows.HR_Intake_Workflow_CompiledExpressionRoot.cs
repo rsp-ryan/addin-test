@@ -1,54 +1,54 @@
 namespace SPAddinTest.Workflows.HR_Intake {
     
-    #line 17 "D:\VS\SPAddinTest\SPAddinTest\Workflows\HR_Intake\Workflow.xaml"
+    #line 17 "D:\VS\SharepointAddin\SPAddinTest\Workflows\HR_Intake\Workflow.xaml"
     using System;
     
     #line default
     #line hidden
     
-    #line 1 "D:\VS\SPAddinTest\SPAddinTest\Workflows\HR_Intake\Workflow.xaml"
+    #line 1 "D:\VS\SharepointAddin\SPAddinTest\Workflows\HR_Intake\Workflow.xaml"
     using System.Collections;
     
     #line default
     #line hidden
     
-    #line 18 "D:\VS\SPAddinTest\SPAddinTest\Workflows\HR_Intake\Workflow.xaml"
+    #line 18 "D:\VS\SharepointAddin\SPAddinTest\Workflows\HR_Intake\Workflow.xaml"
     using System.Collections.Generic;
     
     #line default
     #line hidden
     
-    #line 1 "D:\VS\SPAddinTest\SPAddinTest\Workflows\HR_Intake\Workflow.xaml"
+    #line 1 "D:\VS\SharepointAddin\SPAddinTest\Workflows\HR_Intake\Workflow.xaml"
     using System.Activities;
     
     #line default
     #line hidden
     
-    #line 1 "D:\VS\SPAddinTest\SPAddinTest\Workflows\HR_Intake\Workflow.xaml"
+    #line 1 "D:\VS\SharepointAddin\SPAddinTest\Workflows\HR_Intake\Workflow.xaml"
     using System.Activities.Expressions;
     
     #line default
     #line hidden
     
-    #line 1 "D:\VS\SPAddinTest\SPAddinTest\Workflows\HR_Intake\Workflow.xaml"
+    #line 1 "D:\VS\SharepointAddin\SPAddinTest\Workflows\HR_Intake\Workflow.xaml"
     using System.Activities.Statements;
     
     #line default
     #line hidden
     
-    #line 19 "D:\VS\SPAddinTest\SPAddinTest\Workflows\HR_Intake\Workflow.xaml"
+    #line 19 "D:\VS\SharepointAddin\SPAddinTest\Workflows\HR_Intake\Workflow.xaml"
     using System.Data;
     
     #line default
     #line hidden
     
-    #line 20 "D:\VS\SPAddinTest\SPAddinTest\Workflows\HR_Intake\Workflow.xaml"
+    #line 20 "D:\VS\SharepointAddin\SPAddinTest\Workflows\HR_Intake\Workflow.xaml"
     using System.Text;
     
     #line default
     #line hidden
     
-    #line 1 "D:\VS\SPAddinTest\SPAddinTest\Workflows\HR_Intake\Workflow.xaml"
+    #line 1 "D:\VS\SharepointAddin\SPAddinTest\Workflows\HR_Intake\Workflow.xaml"
     using System.Activities.XamlIntegration;
     
     #line default
@@ -539,7 +539,7 @@ namespace SPAddinTest.Workflows.HR_Intake {
             
             internal System.Linq.Expressions.Expression @__Expr0GetTree() {
                 
-                #line 63 "D:\VS\SPADDINTEST\SPADDINTEST\WORKFLOWS\HR_INTAKE\WORKFLOW.XAML"
+                #line 63 "D:\VS\SHAREPOINTADDIN\SPADDINTEST\WORKFLOWS\HR_INTAKE\WORKFLOW.XAML"
                 System.Linq.Expressions.Expression<System.Func<Microsoft.Activities.DynamicValue>> expression = () => 
           dv_0;
                 
@@ -551,7 +551,7 @@ namespace SPAddinTest.Workflows.HR_Intake {
             [System.Diagnostics.DebuggerHiddenAttribute()]
             public Microsoft.Activities.DynamicValue @__Expr0Get() {
                 
-                #line 63 "D:\VS\SPADDINTEST\SPADDINTEST\WORKFLOWS\HR_INTAKE\WORKFLOW.XAML"
+                #line 63 "D:\VS\SHAREPOINTADDIN\SPADDINTEST\WORKFLOWS\HR_INTAKE\WORKFLOW.XAML"
                 return 
           dv_0;
                 
@@ -567,7 +567,7 @@ namespace SPAddinTest.Workflows.HR_Intake {
             [System.Diagnostics.DebuggerHiddenAttribute()]
             public void @__Expr0Set(Microsoft.Activities.DynamicValue value) {
                 
-                #line 63 "D:\VS\SPADDINTEST\SPADDINTEST\WORKFLOWS\HR_INTAKE\WORKFLOW.XAML"
+                #line 63 "D:\VS\SHAREPOINTADDIN\SPADDINTEST\WORKFLOWS\HR_INTAKE\WORKFLOW.XAML"
                 
           dv_0 = value;
                 
@@ -583,7 +583,7 @@ namespace SPAddinTest.Workflows.HR_Intake {
             
             internal System.Linq.Expressions.Expression @__Expr1GetTree() {
                 
-                #line 75 "D:\VS\SPADDINTEST\SPADDINTEST\WORKFLOWS\HR_INTAKE\WORKFLOW.XAML"
+                #line 75 "D:\VS\SHAREPOINTADDIN\SPADDINTEST\WORKFLOWS\HR_INTAKE\WORKFLOW.XAML"
                 System.Linq.Expressions.Expression<System.Func<string>> expression = () => 
           OrientationStage;
                 
@@ -595,7 +595,7 @@ namespace SPAddinTest.Workflows.HR_Intake {
             [System.Diagnostics.DebuggerHiddenAttribute()]
             public string @__Expr1Get() {
                 
-                #line 75 "D:\VS\SPADDINTEST\SPADDINTEST\WORKFLOWS\HR_INTAKE\WORKFLOW.XAML"
+                #line 75 "D:\VS\SHAREPOINTADDIN\SPADDINTEST\WORKFLOWS\HR_INTAKE\WORKFLOW.XAML"
                 return 
           OrientationStage;
                 
@@ -611,7 +611,7 @@ namespace SPAddinTest.Workflows.HR_Intake {
             [System.Diagnostics.DebuggerHiddenAttribute()]
             public void @__Expr1Set(string value) {
                 
-                #line 75 "D:\VS\SPADDINTEST\SPADDINTEST\WORKFLOWS\HR_INTAKE\WORKFLOW.XAML"
+                #line 75 "D:\VS\SHAREPOINTADDIN\SPADDINTEST\WORKFLOWS\HR_INTAKE\WORKFLOW.XAML"
                 
           OrientationStage = value;
                 
@@ -627,7 +627,7 @@ namespace SPAddinTest.Workflows.HR_Intake {
             
             internal System.Linq.Expressions.Expression @__Expr3GetTree() {
                 
-                #line 78 "D:\VS\SPADDINTEST\SPADDINTEST\WORKFLOWS\HR_INTAKE\WORKFLOW.XAML"
+                #line 78 "D:\VS\SHAREPOINTADDIN\SPADDINTEST\WORKFLOWS\HR_INTAKE\WORKFLOW.XAML"
                 System.Linq.Expressions.Expression<System.Func<string>> expression = () => 
           Title;
                 
@@ -639,7 +639,7 @@ namespace SPAddinTest.Workflows.HR_Intake {
             [System.Diagnostics.DebuggerHiddenAttribute()]
             public string @__Expr3Get() {
                 
-                #line 78 "D:\VS\SPADDINTEST\SPADDINTEST\WORKFLOWS\HR_INTAKE\WORKFLOW.XAML"
+                #line 78 "D:\VS\SHAREPOINTADDIN\SPADDINTEST\WORKFLOWS\HR_INTAKE\WORKFLOW.XAML"
                 return 
           Title;
                 
@@ -655,7 +655,7 @@ namespace SPAddinTest.Workflows.HR_Intake {
             [System.Diagnostics.DebuggerHiddenAttribute()]
             public void @__Expr3Set(string value) {
                 
-                #line 78 "D:\VS\SPADDINTEST\SPADDINTEST\WORKFLOWS\HR_INTAKE\WORKFLOW.XAML"
+                #line 78 "D:\VS\SHAREPOINTADDIN\SPADDINTEST\WORKFLOWS\HR_INTAKE\WORKFLOW.XAML"
                 
           Title = value;
                 
@@ -750,7 +750,7 @@ namespace SPAddinTest.Workflows.HR_Intake {
             
             internal System.Linq.Expressions.Expression @__Expr2GetTree() {
                 
-                #line 70 "D:\VS\SPADDINTEST\SPADDINTEST\WORKFLOWS\HR_INTAKE\WORKFLOW.XAML"
+                #line 70 "D:\VS\SHAREPOINTADDIN\SPADDINTEST\WORKFLOWS\HR_INTAKE\WORKFLOW.XAML"
                 System.Linq.Expressions.Expression<System.Func<Microsoft.Activities.DynamicValue>> expression = () => 
           dv_0;
                 
@@ -762,7 +762,7 @@ namespace SPAddinTest.Workflows.HR_Intake {
             [System.Diagnostics.DebuggerHiddenAttribute()]
             public Microsoft.Activities.DynamicValue @__Expr2Get() {
                 
-                #line 70 "D:\VS\SPADDINTEST\SPADDINTEST\WORKFLOWS\HR_INTAKE\WORKFLOW.XAML"
+                #line 70 "D:\VS\SHAREPOINTADDIN\SPADDINTEST\WORKFLOWS\HR_INTAKE\WORKFLOW.XAML"
                 return 
           dv_0;
                 
@@ -777,7 +777,7 @@ namespace SPAddinTest.Workflows.HR_Intake {
             
             internal System.Linq.Expressions.Expression @__Expr4GetTree() {
                 
-                #line 85 "D:\VS\SPADDINTEST\SPADDINTEST\WORKFLOWS\HR_INTAKE\WORKFLOW.XAML"
+                #line 85 "D:\VS\SHAREPOINTADDIN\SPADDINTEST\WORKFLOWS\HR_INTAKE\WORKFLOW.XAML"
                 System.Linq.Expressions.Expression<System.Func<bool>> expression = () => 
           OrientationStage=="HR paperwork";
                 
@@ -789,7 +789,7 @@ namespace SPAddinTest.Workflows.HR_Intake {
             [System.Diagnostics.DebuggerHiddenAttribute()]
             public bool @__Expr4Get() {
                 
-                #line 85 "D:\VS\SPADDINTEST\SPADDINTEST\WORKFLOWS\HR_INTAKE\WORKFLOW.XAML"
+                #line 85 "D:\VS\SHAREPOINTADDIN\SPADDINTEST\WORKFLOWS\HR_INTAKE\WORKFLOW.XAML"
                 return 
           OrientationStage=="HR paperwork";
                 
@@ -804,7 +804,7 @@ namespace SPAddinTest.Workflows.HR_Intake {
             
             internal System.Linq.Expressions.Expression @__Expr5GetTree() {
                 
-                #line 102 "D:\VS\SPADDINTEST\SPADDINTEST\WORKFLOWS\HR_INTAKE\WORKFLOW.XAML"
+                #line 102 "D:\VS\SHAREPOINTADDIN\SPADDINTEST\WORKFLOWS\HR_INTAKE\WORKFLOW.XAML"
                 System.Linq.Expressions.Expression<System.Func<System.Collections.ObjectModel.Collection<string>>> expression = () => 
               new System.Collections.ObjectModel.Collection<string>() { "ryansbcho@hotmail.com" };
                 
@@ -816,7 +816,7 @@ namespace SPAddinTest.Workflows.HR_Intake {
             [System.Diagnostics.DebuggerHiddenAttribute()]
             public System.Collections.ObjectModel.Collection<string> @__Expr5Get() {
                 
-                #line 102 "D:\VS\SPADDINTEST\SPADDINTEST\WORKFLOWS\HR_INTAKE\WORKFLOW.XAML"
+                #line 102 "D:\VS\SHAREPOINTADDIN\SPADDINTEST\WORKFLOWS\HR_INTAKE\WORKFLOW.XAML"
                 return 
               new System.Collections.ObjectModel.Collection<string>() { "ryansbcho@hotmail.com" };
                 
@@ -831,7 +831,7 @@ namespace SPAddinTest.Workflows.HR_Intake {
             
             internal System.Linq.Expressions.Expression @__Expr6GetTree() {
                 
-                #line 92 "D:\VS\SPADDINTEST\SPADDINTEST\WORKFLOWS\HR_INTAKE\WORKFLOW.XAML"
+                #line 92 "D:\VS\SHAREPOINTADDIN\SPADDINTEST\WORKFLOWS\HR_INTAKE\WORKFLOW.XAML"
                 System.Linq.Expressions.Expression<System.Func<string>> expression = () => 
               Title + " is waiting in the lobby to fill out benefits and employment forms.";
                 
@@ -843,7 +843,7 @@ namespace SPAddinTest.Workflows.HR_Intake {
             [System.Diagnostics.DebuggerHiddenAttribute()]
             public string @__Expr6Get() {
                 
-                #line 92 "D:\VS\SPADDINTEST\SPADDINTEST\WORKFLOWS\HR_INTAKE\WORKFLOW.XAML"
+                #line 92 "D:\VS\SHAREPOINTADDIN\SPADDINTEST\WORKFLOWS\HR_INTAKE\WORKFLOW.XAML"
                 return 
               Title + " is waiting in the lobby to fill out benefits and employment forms.";
                 
@@ -858,7 +858,7 @@ namespace SPAddinTest.Workflows.HR_Intake {
             
             internal System.Linq.Expressions.Expression @__Expr7GetTree() {
                 
-                #line 97 "D:\VS\SPADDINTEST\SPADDINTEST\WORKFLOWS\HR_INTAKE\WORKFLOW.XAML"
+                #line 97 "D:\VS\SHAREPOINTADDIN\SPADDINTEST\WORKFLOWS\HR_INTAKE\WORKFLOW.XAML"
                 System.Linq.Expressions.Expression<System.Func<string>> expression = () => 
               Title + " is ready for HR paperwork";
                 
@@ -870,7 +870,7 @@ namespace SPAddinTest.Workflows.HR_Intake {
             [System.Diagnostics.DebuggerHiddenAttribute()]
             public string @__Expr7Get() {
                 
-                #line 97 "D:\VS\SPADDINTEST\SPADDINTEST\WORKFLOWS\HR_INTAKE\WORKFLOW.XAML"
+                #line 97 "D:\VS\SHAREPOINTADDIN\SPADDINTEST\WORKFLOWS\HR_INTAKE\WORKFLOW.XAML"
                 return 
               Title + " is ready for HR paperwork";
                 

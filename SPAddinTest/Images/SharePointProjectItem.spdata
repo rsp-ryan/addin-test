@@ -4,9 +4,5 @@
     <ProjectItemFile Source="Elements.xml" Target="Images\" Type="ElementManifest" />
     <ProjectItemFile Source="AppIcon.png" Target="Images\" Type="ElementFile" />
     <ProjectItemFile Source="RSP_logo.jpg" Target="Images\" Type="ElementFile" />
-    <ProjectItemFile Source="clockin_active.png" Target="Images\" Type="ElementFile" />
-    <ProjectItemFile Source="clockin_inactive.png" Target="Images\" Type="ElementFile" />
-    <ProjectItemFile Source="clockout_active.png" Target="Images\" Type="ElementFile" />
-    <ProjectItemFile Source="clockout_inactive.png" Target="Images\" Type="ElementFile" />
   </Files>
 </ProjectItem>

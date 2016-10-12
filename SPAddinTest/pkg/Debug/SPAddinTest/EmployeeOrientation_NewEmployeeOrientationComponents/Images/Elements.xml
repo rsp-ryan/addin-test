@@ -3,9 +3,5 @@
   <Module Name="Images">
     <File Path="Images\AppIcon.png" Url="Images/AppIcon.png" ReplaceContent="TRUE" />
     <File Path="Images\RSP_logo.jpg" Url="Images/RSP_logo.jpg" ReplaceContent="TRUE" />
-    <File Path="Images\clockin_active.png" Url="Images/clockin_active.png" ReplaceContent="TRUE" />
-    <File Path="Images\clockin_inactive.png" Url="Images/clockin_inactive.png" ReplaceContent="TRUE" />
-    <File Path="Images\clockout_active.png" Url="Images/clockout_active.png" ReplaceContent="TRUE" />
-    <File Path="Images\clockout_inactive.png" Url="Images/clockout_inactive.png" ReplaceContent="TRUE" />
   </Module>
 </Elements>

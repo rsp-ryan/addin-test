@@ -13,7 +13,7 @@
 </asp:Content> 
 
 <asp:Content ContentPlaceHolderId="PlaceHolderMain" runat="server">
-    <H3>Having a problem with the add-in?</H3>
-<p> Call the help line for Fabrikam Add-ins:</p>
-<p>1-555-555-5555</p>
+    <H3>何か問題がありましたら下記の連絡先にご連絡ください</H3>
+
+<p>nantoka@nantoka.com</p>
 </asp:Content>
