@@ -1,0 +1,11 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Elements xmlns="http://schemas.microsoft.com/sharepoint/">  
+  <Field
+       ID="{f50be983-0aac-4ead-a20e-00bd3fe6e0c6}"
+       Name="ClockOutTime"
+       DisplayName="Clock Out Time"
+       Type="DateTime"
+       Required="FALSE"
+       Group="Employee Orientation">
+  </Field>
+</Elements>

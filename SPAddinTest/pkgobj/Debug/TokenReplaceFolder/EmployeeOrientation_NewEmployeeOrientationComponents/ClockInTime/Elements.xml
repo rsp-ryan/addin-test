@@ -1,0 +1,11 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Elements xmlns="http://schemas.microsoft.com/sharepoint/">  
+  <Field
+       ID="{01f4b107-358f-47e8-a5cc-b880a14427bf}"
+       Name="ClockInTime"
+       DisplayName="Clock In Time"
+       Type="DateTime"
+       Required="FALSE"
+       Group="Employee Orientation">
+  </Field>
+</Elements>

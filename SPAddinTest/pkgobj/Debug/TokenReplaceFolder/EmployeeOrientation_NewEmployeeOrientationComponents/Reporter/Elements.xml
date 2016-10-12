@@ -1,0 +1,11 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Elements xmlns="http://schemas.microsoft.com/sharepoint/">  
+  <Field
+       ID="{c516ffb6-9432-4111-af58-59cbbd9e781b}"
+       Name="Reporter"
+       DisplayName="Reporter"
+       Type="User"
+       Required="FALSE"
+       Group="Employee Orientation">
+  </Field>
+</Elements>

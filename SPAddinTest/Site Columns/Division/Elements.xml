@@ -1,0 +1,12 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Elements xmlns="http://schemas.microsoft.com/sharepoint/">  
+  <Field ID="{e57dc9bb-d2a6-4f5c-ab2d-52f435eaef16}"
+       Name="Division"
+       Title="Division"
+       DisplayName="Division"
+       Description="The division of the company where the employee works."
+       Group="Employee Orientation"
+       Type="Text"
+       Required ="FALSE">
+  </Field>
+</Elements>

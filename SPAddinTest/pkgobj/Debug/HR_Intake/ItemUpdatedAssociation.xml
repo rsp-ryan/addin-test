@@ -1,0 +1,10 @@
+﻿<WorkflowAssociation xmlns="http://schemas.microsoft.com/sharepoint/2012/app/workflow">
+  <Description>HR_Intake - ItemUpdated</Description>
+  <DisplayName>HR_Intake - ItemUpdated</DisplayName>
+  <Enabled>true</Enabled>
+  <EventSourceGUID>Lists/NewEmployeesInSeattle</EventSourceGUID>
+  <EventType>ItemUpdated</EventType>
+  <HistoryListId>Lists/WorkflowHistoryList</HistoryListId>
+  <Id>196ce4fb-83b0-4c64-86d5-3e0293f5a42a</Id>
+  <TaskListId>Lists/WorkflowTaskList</TaskListId>
+</WorkflowAssociation>

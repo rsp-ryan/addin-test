@@ -1,0 +1,230 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="14.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{9F0389B0-5168-4A95-B439-ACDC29C00678}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>SPAddinTest</RootNamespace>
+    <AssemblyName>SPAddinTest</AssemblyName>
+    <TargetFrameworkVersion>v4.5</TargetFrameworkVersion>
+    <TargetOfficeVersion>15.0</TargetOfficeVersion>
+    <FileAlignment>512</FileAlignment>
+    <ProjectTypeGuids>{C1CDDADD-2546-481F-9697-4EA41081F2FC};{14822709-B5A1-4724-98CA-57A101D1B079};{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}</ProjectTypeGuids>
+    <MinimumVisualStudioVersion>11.0</MinimumVisualStudioVersion>
+    <MinimumOfficeToolsVersion>11.1</MinimumOfficeToolsVersion>
+    <IncludeAssemblyInPackage>False</IncludeAssemblyInPackage>
+    <ProjectMode>SharePointApp</ProjectMode>
+    <AppFeaturePartId>{6eaa8bf8-c2e6-4415-baef-54617e0b6318}</AppFeaturePartId>
+    <WspPartId>{3052e231-1c6b-437b-b8af-54a121109f85}</WspPartId>
+    <WorkflowPartId>{bc990a54-7779-4286-994b-732a67162661}</WorkflowPartId>
+    <CspkgPartId>{bca3e2f4-37d4-4bb9-afe1-76d56a24e2ae}</CspkgPartId>
+    <SqlPackagePartId>{ab2ab0cf-4480-42e0-93bd-b2fd39659034}</SqlPackagePartId>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <UseVSHostingProcess>false</UseVSHostingProcess>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <UseVSHostingProcess>false</UseVSHostingProcess>
+  </PropertyGroup>
+  <ItemGroup>
+    <Content Include="Content Types\NewEmployee\Elements.xml">
+      <SubType>Designer</SubType>
+    </Content>
+    <Content Include="Images\clockin_active.png" />
+    <Content Include="Images\clockin_inactive.png" />
+    <Content Include="Images\clockout_active.png" />
+    <Content Include="Images\clockout_inactive.png" />
+    <Content Include="Images\RSP_logo.jpg" />
+    <Content Include="Pages\Approval.aspx" />
+    <Content Include="Pages\Help.aspx" />
+    <Content Include="Pages\PastReport.aspx" />
+    <Content Include="Pages\Settings.aspx" />
+    <Content Include="Pages\Statistics.aspx" />
+    <Content Include="RunOrientationAdd-in\Elements.xml">
+      <OpcRelationship>feature-elementmanifest</OpcRelationship>
+    </Content>
+    <Content Include="Scripts\OrientationStageRendering.js" />
+    <Content Include="Site Columns\BreakMinute\Elements.xml">
+      <SubType>Designer</SubType>
+    </Content>
+    <Content Include="Site Columns\ClockInTime\Elements.xml">
+      <SubType>Designer</SubType>
+    </Content>
+    <Content Include="Site Columns\ClockOutTime\Elements.xml">
+      <SubType>Designer</SubType>
+    </Content>
+    <Content Include="Site Columns\Comment\Elements.xml">
+      <SubType>Designer</SubType>
+    </Content>
+    <Content Include="Site Columns\Division\Elements.xml">
+      <SubType>Designer</SubType>
+    </Content>
+    <Content Include="Site Columns\InMinute\Elements.xml" />
+    <Content Include="Site Columns\OutMinute\Elements.xml" />
+    <Content Include="Site Columns\Sentiment\Elements.xml">
+      <SubType>Designer</SubType>
+    </Content>
+    <Content Include="Lists\WorkflowHistoryList\Elements.xml" />
+    <Content Include="Lists\WorkflowTaskList\Elements.xml" />
+    <Content Include="Site Columns\Reporter\Elements.xml">
+      <SubType>Designer</SubType>
+    </Content>
+    <Content Include="Site Columns\WorkDate\Elements.xml" />
+    <None Include="Content Types\NewEmployee\SharePointProjectItem.spdata">
+      <SharePointProjectItemId>{4bad5b8d-f11f-4b7d-bb44-7c9f6339e9c1}</SharePointProjectItemId>
+    </None>
+    <None Include="Lists\NewEmployeeOrientation\NewEmployeesInSeattle\SharePointProjectItem.spdata">
+      <SharePointProjectItemId>{b4b40f92-aa84-4a14-8038-8d56cdb18ec0}</SharePointProjectItemId>
+    </None>
+    <None Include="Lists\NewEmployeeOrientation\SharePointProjectItem.spdata">
+      <SharePointProjectItemId>{1710e8b0-671f-4ff5-9439-bca37f1d9e8c}</SharePointProjectItemId>
+    </None>
+    <None Include="packages.config" />
+    <None Include="Pages\SharePointProjectItem.spdata">
+      <SharePointProjectItemId>{bee70914-a138-4d35-9511-c90c06b265c9}</SharePointProjectItemId>
+    </None>
+    <Content Include="Lists\NewEmployeeOrientation\Elements.xml">
+      <SubType>Designer</SubType>
+    </Content>
+    <Content Include="Lists\NewEmployeeOrientation\NewEmployeesInSeattle\Elements.xml">
+      <SubType>Designer</SubType>
+    </Content>
+    <Content Include="Lists\NewEmployeeOrientation\Schema.xml" />
+    <Content Include="Pages\Elements.xml">
+      <SubType>Designer</SubType>
+    </Content>
+    <Content Include="Pages\Default.aspx" />
+    <None Include="RunOrientationAdd-in\SharePointProjectItem.spdata">
+      <SharePointProjectItemId>{5f6c39dd-75bd-4504-aa21-c7594aa765ec}</SharePointProjectItemId>
+    </None>
+    <None Include="Site Columns\BreakMinute\SharePointProjectItem.spdata">
+      <SharePointProjectItemId>{be85b6d7-bb41-47f9-b760-c121e889baa4}</SharePointProjectItemId>
+    </None>
+    <None Include="Site Columns\ClockInTime\SharePointProjectItem.spdata">
+      <SharePointProjectItemId>{3dc68fe0-d958-4aad-a80d-d16df50ac9be}</SharePointProjectItemId>
+    </None>
+    <None Include="Site Columns\ClockOutTime\SharePointProjectItem.spdata">
+      <SharePointProjectItemId>{734d94e1-3ea7-4f07-8216-3a19f1dda4c4}</SharePointProjectItemId>
+    </None>
+    <None Include="Site Columns\Comment\SharePointProjectItem.spdata">
+      <SharePointProjectItemId>{95741ec7-0935-4cf8-90be-cdb3211f4a9b}</SharePointProjectItemId>
+    </None>
+    <None Include="Site Columns\Division\SharePointProjectItem.spdata">
+      <SharePointProjectItemId>{4c7b4d8a-3978-4366-9505-4fd854b7d7a9}</SharePointProjectItemId>
+    </None>
+    <None Include="Site Columns\InMinute\SharePointProjectItem.spdata">
+      <SharePointProjectItemId>{51f3cf51-3500-475a-9cc1-d60b2526638f}</SharePointProjectItemId>
+    </None>
+    <None Include="Site Columns\OutMinute\SharePointProjectItem.spdata">
+      <SharePointProjectItemId>{e6b27071-0a31-42ef-a27d-28a6f80f01a5}</SharePointProjectItemId>
+    </None>
+    <None Include="Site Columns\Sentiment\SharePointProjectItem.spdata">
+      <SharePointProjectItemId>{9a6a0157-f320-4d79-9af0-2533c46b984c}</SharePointProjectItemId>
+    </None>
+    <None Include="Lists\WorkflowHistoryList\SharePointProjectItem.spdata">
+      <SharePointProjectItemId>{cb35d225-5b2b-491a-872f-db9790e23bd1}</SharePointProjectItemId>
+    </None>
+    <None Include="Site Columns\Reporter\SharePointProjectItem.spdata">
+      <SharePointProjectItemId>{76786651-dfb3-4e67-93ff-9ab5f27ab126}</SharePointProjectItemId>
+    </None>
+    <None Include="Site Columns\WorkDate\SharePointProjectItem.spdata">
+      <SharePointProjectItemId>{e348fadd-27e8-4cd7-ab37-63dd25016eb6}</SharePointProjectItemId>
+    </None>
+    <None Include="Workflows\HR_Intake\SharePointProjectItem.spdata">
+      <SharePointProjectItemId>{174131f2-44fe-4a1d-8458-0e03e78a5435}</SharePointProjectItemId>
+    </None>
+    <None Include="Lists\WorkflowTaskList\SharePointProjectItem.spdata">
+      <SharePointProjectItemId>{8041bc46-89ab-41a6-a9dc-b9f15a4a9322}</SharePointProjectItemId>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Scripts\jquery-1.9.1.min.map" />
+    <None Include="Scripts\SharePointProjectItem.spdata">
+      <SharePointProjectItemId>{ab2ab0cf-4480-42e0-93bd-b2fd39659034}</SharePointProjectItemId>
+    </None>
+    <Content Include="Scripts\Elements.xml" />
+    <Content Include="Scripts\Add-in.js" />
+    <Content Include="Scripts\jquery-1.9.1.intellisense.js" />
+    <Content Include="Scripts\jquery-1.9.1.js" />
+    <Content Include="Scripts\jquery-1.9.1.min.js" />
+    <Content Include="Scripts\_references.js" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Content\SharePointProjectItem.spdata">
+      <SharePointProjectItemId>{37e824a3-1694-4e51-9f90-4e6306aa76df}</SharePointProjectItemId>
+    </None>
+    <Content Include="Content\Elements.xml" />
+    <Content Include="Content\App.css" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Images\AppIcon.png">
+      <OpcRelationship>manifest-icon</OpcRelationship>
+    </Content>
+    <Content Include="Images\Elements.xml">
+      <SubType>Designer</SubType>
+    </Content>
+    <None Include="Images\SharePointProjectItem.spdata">
+      <SharePointProjectItemId>{f5384042-b82b-4335-ad47-b3c12e42fb93}</SharePointProjectItemId>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Package\Package.package">
+      <PackageId>{e189e4ff-3768-4387-88d9-6087612d95ce}</PackageId>
+    </None>
+    <None Include="Package\Package.Template.xml">
+      <DependentUpon>Package.package</DependentUpon>
+    </None>
+    <None Include="Features\NewEmployeeOrientationComponents\NewEmployeeOrientationComponents.feature">
+      <FeatureId>{6bcddd9a-e16d-4e2a-8fe2-c5d5033e14f6}</FeatureId>
+    </None>
+    <None Include="Features\NewEmployeeOrientationComponents\NewEmployeeOrientationComponents.Template.xml">
+      <DependentUpon>NewEmployeeOrientationComponents.feature</DependentUpon>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <AppManifestFile Include="AppManifest.xml">
+      <SubType>Designer</SubType>
+    </AppManifestFile>
+  </ItemGroup>
+  <ItemGroup>
+    <XamlAppDef Include="Workflows\HR_Intake\Workflow.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </XamlAppDef>
+  </ItemGroup>
+  <ItemGroup>
+    <Reference Include="Microsoft.Activities, Version=1.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL" />
+    <Reference Include="Microsoft.SharePoint.DesignTime.Activities, Version=14.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL" />
+    <Reference Include="PresentationFramework" />
+    <Reference Include="System" />
+    <Reference Include="System.Activities" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Runtime.Serialization" />
+    <Reference Include="System.ServiceModel.Activities" />
+    <Reference Include="System.Xaml" />
+    <Reference Include="System.Xml" />
+    <Reference Include="System.Xml.Linq" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <PropertyGroup>
+    <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>
+    <VSToolsPath Condition="'$(VSToolsPath)' == ''">$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v$(VisualStudioVersion)</VSToolsPath>
+  </PropertyGroup>
+  <Import Project="$(VSToolsPath)\SharePointTools\Microsoft.VisualStudio.SharePoint.targets" Condition="'$(VSToolsPath)' != ''" />
+</Project>

@@ -1,0 +1,93 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<List xmlns:ows="Microsoft SharePoint" Title="NewEmployeeOrientation" FolderCreation="FALSE" Direction="$Resources:Direction;" Url="Lists/NewEmployeeOrientation" BaseType="0" xmlns="http://schemas.microsoft.com/sharepoint/" EnableContentTypes="TRUE">
+  <MetaData>
+    <ContentTypes>
+
+       
+    <ContentType ID="0x0100160cb2daa1804c58a0f7245e423a55d4" Name="ListFieldsContentType"><FieldRefs><FieldRef ID="{c516ffb6-9432-4111-af58-59cbbd9e781b}" Name="Reporter" /><FieldRef ID="{0f444d44-7a01-4acc-bd61-4f8683800dcb}" Name="Comment" /><FieldRef ID="{9f9cf281-51e4-486d-9936-50ae6e508d01}" Name="Sentiment" /><FieldRef ID="{6b9b4e97-c813-454f-9294-4e1f9a624e38}" Name="BreakMinute" /><FieldRef ID="{ab1e6d5f-3665-4532-bbb4-abe3855e5259}" Name="WorkDate" /><FieldRef ID="{6a4aa195-9ae5-401c-8508-c1e7f27aa303}" Name="InMinute" /><FieldRef ID="{c3793e9b-30cc-4002-a109-667e564fcbf2}" Name="OutMinute" /></FieldRefs></ContentType><ContentType ID="0x01002A3D2AB91D524301BE957E342E59DA06" Name="NewEmployee" Group="Employee Orientation" Description="Represents a new employee" Inherits="FALSE" Version="0"><FieldRefs><FieldRef ID="{c516ffb6-9432-4111-af58-59cbbd9e781b}" DisplayName="Reporter" Required="FALSE" Name="Reporter" /><FieldRef ID="{01f4b107-358f-47e8-a5cc-b880a14427bf}" DisplayName="Clock In Time" Required="FALSE" Name="ClockInTime" /><FieldRef ID="{f50be983-0aac-4ead-a20e-00bd3fe6e0c6}" DisplayName="Clock Out Time" Required="FALSE" Name="ClockOutTime" /><FieldRef ID="{0f444d44-7a01-4acc-bd61-4f8683800dcb}" DisplayName="Comment" Required="FALSE" Name="Comment" /><FieldRef ID="{9f9cf281-51e4-486d-9936-50ae6e508d01}" DisplayName="Sentiment" Required="TRUE" Description="The current orientation stage of the employee." Name="Sentiment" /></FieldRefs></ContentType></ContentTypes>
+    <Fields>
+      
+    
+      
+      
+      
+      
+      
+      
+    <Field ID="{c516ffb6-9432-4111-af58-59cbbd9e781b}" Name="Reporter" DisplayName="Reporter" Type="User" Required="FALSE" Group="Employee Orientation" List="UserInfo"></Field>
+      <Field ID="{0f444d44-7a01-4acc-bd61-4f8683800dcb}" Name="Comment" DisplayName="Comment" Type="Note" Required="FALSE" Group="Employee Orientation"></Field>
+      <Field ID="{9f9cf281-51e4-486d-9936-50ae6e508d01}" Name="Sentiment" Title="Sentiment" DisplayName="Sentiment" Group="Employee Orientation" Description="The current orientation stage of the employee." Type="Choice" Required="TRUE" JSLink="~site/Scripts/OrientationStageRendering.js">
+        <CHOICES>
+          
+          
+          
+          
+          
+        <CHOICE>最悪</CHOICE><CHOICE>悪い</CHOICE><CHOICE>普通</CHOICE><CHOICE>良好</CHOICE><CHOICE>絶好調</CHOICE></CHOICES>
+        <MAPPINGS>
+          <MAPPING Value="1">最悪</MAPPING>
+          <MAPPING Value="2">悪い</MAPPING>
+          <MAPPING Value="3">普通</MAPPING>
+          <MAPPING Value="4">良好</MAPPING>
+          <MAPPING Value="5">絶好調</MAPPING>
+        </MAPPINGS>
+        <Default>良好</Default>
+      </Field>
+      <Field ID="{6b9b4e97-c813-454f-9294-4e1f9a624e38}" Name="BreakMinute" DisplayName="Break Minute" Type="Number" Required="FALSE" Group="Employee Orientation"></Field>
+      <Field ID="{ab1e6d5f-3665-4532-bbb4-abe3855e5259}" Name="WorkDate" DisplayName="Work Date" Type="DateTime" Required="FALSE" Group="Employee Orientation"></Field>
+      <Field ID="{6a4aa195-9ae5-401c-8508-c1e7f27aa303}" Name="InMinute" DisplayName="In Minute" Type="Number" Required="FALSE" Group="Employee Orientation"></Field>
+      <Field ID="{c3793e9b-30cc-4002-a109-667e564fcbf2}" Name="OutMinute" DisplayName="Out Minute" Type="Number" Required="FALSE" Group="Employee Orientation"></Field>
+    </Fields>
+    <Views>
+      
+      
+    <View BaseViewID="0" Type="HTML" MobileView="TRUE" TabularView="FALSE">
+        <Toolbar Type="Standard" />
+        <XslLink Default="TRUE">main.xsl</XslLink>
+        <RowLimit Paged="TRUE">30</RowLimit>
+      <ViewFields>
+        
+        
+        
+        
+        
+      <FieldRef Name="Reporter" ID="{c516ffb6-9432-4111-af58-59cbbd9e781b}" /><FieldRef Name="ClockInTime" ID="{01f4b107-358f-47e8-a5cc-b880a14427bf}" /><FieldRef Name="ClockOutTime" ID="{f50be983-0aac-4ead-a20e-00bd3fe6e0c6}" /><FieldRef Name="Comment" ID="{0f444d44-7a01-4acc-bd61-4f8683800dcb}" /><FieldRef Name="Sentiment" ID="{9f9cf281-51e4-486d-9936-50ae6e508d01}" /></ViewFields>
+        <Query>
+          <OrderBy>
+            
+          <FieldRef Name="Modified" Ascending="FALSE"></FieldRef></OrderBy>
+        </Query>
+        <ParameterBindings>
+          <ParameterBinding Name="AddNewAnnouncement" Location="Resource(wss,addnewitem)" />
+          <ParameterBinding Name="NoAnnouncements" Location="Resource(wss,noXinviewofY_LIST)" />
+          <ParameterBinding Name="NoAnnouncementsHowTo" Location="Resource(wss,noXinviewofY_ONET_HOME)" />
+        </ParameterBindings>
+      </View><View BaseViewID="1" Type="HTML" WebPartZoneID="Main" DisplayName="$Resources:core,objectiv_schema_mwsidcamlidC24;" DefaultView="TRUE" MobileView="TRUE" MobileDefaultView="TRUE" SetupPath="pages\viewpage.aspx" ImageUrl="/_layouts/15/images/generic.png?rev=23" Url="AllItems.aspx">
+        <Toolbar Type="Standard" />
+        <XslLink Default="TRUE">main.xsl</XslLink>
+        <JSLink>clienttemplates.js</JSLink>
+        <RowLimit Paged="TRUE">30</RowLimit>
+        <ViewFields>
+          
+          
+          
+          
+          
+        <FieldRef Name="Reporter" ID="{c516ffb6-9432-4111-af58-59cbbd9e781b}" /><FieldRef Name="Comment" ID="{0f444d44-7a01-4acc-bd61-4f8683800dcb}" /><FieldRef Name="Sentiment" ID="{9f9cf281-51e4-486d-9936-50ae6e508d01}" /><FieldRef Name="BreakMinute" /><FieldRef Name="WorkDate" /><FieldRef Name="InMinute" /><FieldRef Name="OutMinute" /></ViewFields>
+          <Query>
+          <OrderBy>
+            
+          <FieldRef Name="ID"></FieldRef></OrderBy>
+        </Query>
+        <ParameterBindings>
+          <ParameterBinding Name="NoAnnouncements" Location="Resource(wss,noXinviewofY_LIST)" />
+          <ParameterBinding Name="NoAnnouncementsHowTo" Location="Resource(wss,noXinviewofY_DEFAULT)" />
+        </ParameterBindings>
+      </View></Views>
+    <Forms>
+      <Form Type="DisplayForm" Url="DispForm.aspx" SetupPath="pages\form.aspx" WebPartZoneID="Main" />
+      <Form Type="EditForm" Url="EditForm.aspx" SetupPath="pages\form.aspx" WebPartZoneID="Main" />
+      <Form Type="NewForm" Url="NewForm.aspx" SetupPath="pages\form.aspx" WebPartZoneID="Main" />
+    </Forms>
+  </MetaData>
+</List>

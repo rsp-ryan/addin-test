@@ -1,0 +1,28 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Elements xmlns="http://schemas.microsoft.com/sharepoint/">  
+  <Field ID="{9f9cf281-51e4-486d-9936-50ae6e508d01}"
+       Name="Sentiment"
+       Title="Sentiment"
+       DisplayName="Sentiment"
+       Group="Employee Orientation"
+       Description="The current orientation stage of the employee."
+       Type="Choice"
+       Required ="TRUE"
+         JSLink="~site/Scripts/OrientationStageRendering.js">
+    <CHOICES>
+      <CHOICE>最悪</CHOICE>
+      <CHOICE>悪い</CHOICE>
+      <CHOICE>普通</CHOICE>
+      <CHOICE>良好</CHOICE>
+      <CHOICE>絶好調</CHOICE>
+    </CHOICES>
+    <MAPPINGS>
+      <MAPPING Value="1">最悪</MAPPING>
+      <MAPPING Value="2">悪い</MAPPING>
+      <MAPPING Value="3">普通</MAPPING>
+      <MAPPING Value="4">良好</MAPPING>
+      <MAPPING Value="5">絶好調</MAPPING>
+    </MAPPINGS>
+    <Default>良好</Default>
+  </Field>
+</Elements>

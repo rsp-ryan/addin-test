@@ -1,0 +1,15 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Elements xmlns="http://schemas.microsoft.com/sharepoint/">
+  <!-- Parent ContentType: アイテム (0x01) -->
+  <ContentType ID="0x01002A3D2AB91D524301BE957E342E59DA06" Name="NewEmployee" Group="Employee Orientation" Description="Represents a new employee" Inherits="FALSE" Version="0">
+    <FieldRefs>
+      <FieldRef ID="{c516ffb6-9432-4111-af58-59cbbd9e781b}" DisplayName="Reporter" Required="FALSE" Name="Reporter" />
+      <FieldRef ID="{0f444d44-7a01-4acc-bd61-4f8683800dcb}" DisplayName="Comment" Required="FALSE" Name="Comment" />
+      <FieldRef ID="{9f9cf281-51e4-486d-9936-50ae6e508d01}" DisplayName="Sentiment" Required="TRUE" Description="The current orientation stage of the employee." Name="Sentiment" />
+      <FieldRef ID="{ab1e6d5f-3665-4532-bbb4-abe3855e5259}" DisplayName="Work Date" Required="FALSE" Name="WorkDate" />
+      <FieldRef ID="{6b9b4e97-c813-454f-9294-4e1f9a624e38}" DisplayName="Break Minute" Required="FALSE" Name="BreakMinute" />
+      <FieldRef ID="{6a4aa195-9ae5-401c-8508-c1e7f27aa303}" DisplayName="In Minute" Required="FALSE" Name="InMinute" />
+      <FieldRef ID="{c3793e9b-30cc-4002-a109-667e564fcbf2}" DisplayName="Out Minute" Required="FALSE" Name="OutMinute" />
+    </FieldRefs>
+  </ContentType>
+</Elements>

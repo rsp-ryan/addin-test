@@ -1,0 +1,156 @@
+<Activity mc:Ignorable="sads" x:Class="SPAddinTest.Workflows.HR_Intake.Workflow"
+ xmlns="http://schemas.microsoft.com/netfx/2009/xaml/activities"
+ xmlns:made="clr-namespace:Microsoft.Activities.Design.ExpressionTranslation;assembly=Microsoft.Activities.Design"
+ xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+ xmlns:mca="clr-namespace:Microsoft.CSharp.Activities;assembly=System.Activities"
+ xmlns:p="http://schemas.microsoft.com/workflow/2012/07/xaml/activities"
+ xmlns:p1="wf://workflow.windows.net/$Activities"
+ xmlns:s="clr-namespace:System;assembly=mscorlib"
+ xmlns:sads="http://schemas.microsoft.com/netfx/2010/xaml/activities/debugger"
+ xmlns:scg="clr-namespace:System.Collections.Generic;assembly=mscorlib"
+ xmlns:sco="clr-namespace:System.Collections.ObjectModel;assembly=mscorlib"
+ xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
+  <Sequence sads:DebugSymbol.Symbol="9xDo0qkZHYzpR+j7bJJQfRfrP0Q6XFZTXFNQQWRkaW5UZXN0XFNQQWRkaW5UZXN0XFdvcmtmbG93c1xIUl9JbnRha2VcV29ya2Zsb3cueGFtbAYpA3EOAgEBLwVDGwIBFEQFUhwCAQ1TBW8KAgECWglqFAIBB20JbXgCAQU=">
+    <Sequence.Variables>
+      <Variable x:TypeArguments="p:DynamicValue" x:Name="__ReferenceID0" Name="dv_0" />
+      <Variable x:TypeArguments="x:String" x:Name="__ReferenceID1" Name="OrientationStage" />
+      <Variable x:TypeArguments="x:String" x:Name="__ReferenceID2" Name="Title" />
+    </Sequence.Variables>
+    <p1:LookupSPListItem ItemGuid="{x:Null}" Properties="{x:Null}" DisplayName="LookupCurrentNewEmployee">
+      <p1:LookupSPListItem.ItemId>
+        <InArgument x:TypeArguments="x:Int32">
+          <p:ExpressionContainerValue x:TypeArguments="x:Int32">
+            <p1:GetCurrentItemId />
+          </p:ExpressionContainerValue>
+        </InArgument>
+      </p1:LookupSPListItem.ItemId>
+      <p1:LookupSPListItem.ListId>
+        <InArgument x:TypeArguments="s:Guid">
+          <p:ExpressionContainerValue x:TypeArguments="s:Guid">
+            <p1:GetCurrentListId />
+          </p:ExpressionContainerValue>
+        </InArgument>
+      </p1:LookupSPListItem.ListId>
+      <p1:LookupSPListItem.Result>
+        <OutArgument x:TypeArguments="p:DynamicValue">
+          <p:ExpressionContainerReference x:TypeArguments="p:DynamicValue" DisplayName="dv_0">
+            <p:ExpressionContainerReference.Arguments>
+              <InOutArgument x:TypeArguments="p:DynamicValue" x:Key="dv_0">
+                <VariableReference x:TypeArguments="p:DynamicValue" Variable="{x:Reference __ReferenceID0}" />
+              </InOutArgument>
+            </p:ExpressionContainerReference.Arguments>
+            <ArgumentReference x:TypeArguments="p:DynamicValue" ArgumentName="dv_0" />
+          </p:ExpressionContainerReference>
+        </OutArgument>
+      </p1:LookupSPListItem.Result>
+    </p1:LookupSPListItem>
+    <p:GetODataProperties DisplayName="GetDynamicValueProperties">
+      <p:GetODataProperties.Source>
+        <InArgument x:TypeArguments="p:DynamicValue">
+          <p:ExpressionContainerValue x:TypeArguments="p:DynamicValue" DisplayName="dv_0">
+            <p:ExpressionContainerValue.Arguments>
+              <InArgument x:TypeArguments="p:DynamicValue" x:Key="dv_0">
+                <VariableValue x:TypeArguments="p:DynamicValue" Variable="{x:Reference __ReferenceID0}" />
+              </InArgument>
+            </p:ExpressionContainerValue.Arguments>
+            <ArgumentValue x:TypeArguments="p:DynamicValue" ArgumentName="dv_0" />
+          </p:ExpressionContainerValue>
+        </InArgument>
+      </p:GetODataProperties.Source>
+      <scg:Dictionary x:TypeArguments="x:String, OutArgument">
+        <OutArgument x:TypeArguments="x:String" x:Key="OrientationStage">
+          <p:ExpressionContainerReference x:TypeArguments="x:String" DisplayName="OrientationStage">
+            <p:ExpressionContainerReference.Arguments>
+              <InOutArgument x:TypeArguments="x:String" x:Key="OrientationStage">
+                <VariableReference x:TypeArguments="x:String" Variable="{x:Reference __ReferenceID1}" />
+              </InOutArgument>
+            </p:ExpressionContainerReference.Arguments>
+            <ArgumentReference x:TypeArguments="x:String" ArgumentName="OrientationStage" />
+          </p:ExpressionContainerReference>
+        </OutArgument>
+        <OutArgument x:TypeArguments="x:String" x:Key="Title">
+          <p:ExpressionContainerReference x:TypeArguments="x:String" DisplayName="Title">
+            <p:ExpressionContainerReference.Arguments>
+              <InOutArgument x:TypeArguments="x:String" x:Key="Title">
+                <VariableReference x:TypeArguments="x:String" Variable="{x:Reference __ReferenceID2}" />
+              </InOutArgument>
+            </p:ExpressionContainerReference.Arguments>
+            <ArgumentReference x:TypeArguments="x:String" ArgumentName="Title" />
+          </p:ExpressionContainerReference>
+        </OutArgument>
+      </scg:Dictionary>
+    </p:GetODataProperties>
+    <If>
+      <If.Condition>
+        <InArgument x:TypeArguments="x:Boolean">
+          <p:ExpressionContainerValue x:TypeArguments="x:Boolean" DisplayName="OrientationStage==&quot;HR paperwork&quot;">
+            <p:ExpressionContainerValue.Arguments>
+              <InArgument x:TypeArguments="x:String" x:Key="OrientationStage">
+                <VariableValue x:TypeArguments="x:String" Variable="{x:Reference __ReferenceID1}" />
+              </InArgument>
+            </p:ExpressionContainerValue.Arguments>
+            <p:IsEqualString Pattern="{x:Null}" Text="HR paperwork">
+              <p:IsEqualString.Input>
+                <InArgument x:TypeArguments="x:String">
+                  <ArgumentValue x:TypeArguments="x:String" ArgumentName="OrientationStage" />
+                </InArgument>
+              </p:IsEqualString.Input>
+            </p:IsEqualString>
+          </p:ExpressionContainerValue>
+        </InArgument>
+      </If.Condition>
+      <If.Then>
+        <p1:Email AdditionalHeaders="{x:Null}" BCC="{x:Null}" CC="{x:Null}">
+          <p1:Email.Body>
+            <InArgument x:TypeArguments="x:String">
+              <p:ExpressionContainerValue x:TypeArguments="x:String" DisplayName="Title + &quot; is waiting in the lobby to fill out benefits and employment forms.&quot;">
+                <p:ExpressionContainerValue.Arguments>
+                  <InArgument x:TypeArguments="x:String" x:Key="Title">
+                    <VariableValue x:TypeArguments="x:String" Variable="{x:Reference __ReferenceID2}" />
+                  </InArgument>
+                </p:ExpressionContainerValue.Arguments>
+                <p:ConcatString>
+                  <InArgument x:TypeArguments="x:String" EvaluationOrder="1">
+                    <ArgumentValue x:TypeArguments="x:String" ArgumentName="Title" />
+                  </InArgument>
+                  <InArgument x:TypeArguments="x:String" EvaluationOrder="2" Expression=" is waiting in the lobby to fill out benefits and employment forms." />
+                </p:ConcatString>
+              </p:ExpressionContainerValue>
+            </InArgument>
+          </p1:Email.Body>
+          <p1:Email.Subject>
+            <InArgument x:TypeArguments="x:String">
+              <p:ExpressionContainerValue x:TypeArguments="x:String" DisplayName="Title + &quot; is ready for HR paperwork&quot;">
+                <p:ExpressionContainerValue.Arguments>
+                  <InArgument x:TypeArguments="x:String" x:Key="Title">
+                    <VariableValue x:TypeArguments="x:String" Variable="{x:Reference __ReferenceID2}" />
+                  </InArgument>
+                </p:ExpressionContainerValue.Arguments>
+                <p:ConcatString>
+                  <InArgument x:TypeArguments="x:String" EvaluationOrder="1">
+                    <ArgumentValue x:TypeArguments="x:String" ArgumentName="Title" />
+                  </InArgument>
+                  <InArgument x:TypeArguments="x:String" EvaluationOrder="2" Expression=" is ready for HR paperwork" />
+                </p:ConcatString>
+              </p:ExpressionContainerValue>
+            </InArgument>
+          </p1:Email.Subject>
+          <p1:Email.To>
+            <InArgument x:TypeArguments="sco:Collection(x:String)">
+              <p:ExpressionContainerValue x:TypeArguments="sco:Collection(x:String)" DisplayName="new System.Collections.ObjectModel.Collection&lt;string&gt;() { &quot;ryansbcho@hotmail.com&quot; }">
+                <p:BuildCollection x:TypeArguments="x:String">
+                  <p:BuildCollection.Values>
+                    <InArgument x:TypeArguments="x:String">ryansbcho@hotmail.com</InArgument>
+                  </p:BuildCollection.Values>
+                </p:BuildCollection>
+              </p:ExpressionContainerValue>
+            </InArgument>
+          </p1:Email.To>
+        </p1:Email>
+      </If.Then>
+      <If.Else>
+        <TerminateWorkflow Reason="Not at HR paperwork stage." />
+      </If.Else>
+    </If>
+  </Sequence>
+</Activity>

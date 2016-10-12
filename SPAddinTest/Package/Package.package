@@ -1,0 +1,11 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<package dslVersion="1.0.0.0" 
+        Id="e189e4ff-3768-4387-88d9-6087612d95ce" 
+        solutionId="e189e4ff-3768-4387-88d9-6087612d95ce" 
+        xmlns="http://schemas.microsoft.com/VisualStudio/2008/SharePointTools/PackageModel" 
+        name="SPAddinTest"
+        sharePointProductVersion="15.0">
+  <features>
+        <featureReference itemId="6bcddd9a-e16d-4e2a-8fe2-c5d5033e14f6" />
+  </features>
+</package>

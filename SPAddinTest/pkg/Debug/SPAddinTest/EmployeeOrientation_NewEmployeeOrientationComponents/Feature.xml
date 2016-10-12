@@ -1,0 +1,69 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Feature xmlns="http://schemas.microsoft.com/sharepoint/" Description="Lists and other components for getting employees oriented to the company." Id="6bcddd9a-e16d-4e2a-8fe2-c5d5033e14f6" Scope="Web" Title="New Employee Orientation Components" Version="1.0.0.0">
+  <ElementManifests>
+    <ElementManifest Location="Pages\Elements.xml" />
+    <ElementFile Location="Pages\Default.aspx" />
+    <ElementFile Location="Pages\Help.aspx" />
+    <ElementFile Location="Pages\Settings.aspx" />
+    <ElementFile Location="Pages\Approval.aspx" />
+    <ElementFile Location="Pages\PastReport.aspx" />
+    <ElementFile Location="Pages\Statistics.aspx" />
+    <ElementManifest Location="Scripts\Elements.xml" />
+    <ElementFile Location="Scripts\Add-in.js" />
+    <ElementFile Location="Scripts\jquery-1.9.1.min.map" />
+    <ElementFile Location="Scripts\jquery-1.9.1.min.js" />
+    <ElementFile Location="Scripts\jquery-1.9.1.js" />
+    <ElementFile Location="Scripts\jquery-1.9.1.intellisense.js" />
+    <ElementFile Location="Scripts\OrientationStageRendering.js" />
+    <ElementManifest Location="Content\Elements.xml" />
+    <ElementFile Location="Content\App.css" />
+    <ElementManifest Location="Images\Elements.xml" />
+    <ElementFile Location="Images\AppIcon.png" />
+    <ElementFile Location="Images\RSP_logo.jpg" />
+    <ElementFile Location="Images\clockin_active.png" />
+    <ElementFile Location="Images\clockin_inactive.png" />
+    <ElementFile Location="Images\clockout_active.png" />
+    <ElementFile Location="Images\clockout_inactive.png" />
+    <ElementManifest Location="NewEmployeesInSeattle\Elements.xml" />
+    <ElementManifest Location="NewEmployeeOrientation\Elements.xml" />
+    <ElementFile Location="NewEmployeeOrientation\Schema.xml" />
+    <ElementManifest Location="Division\Elements.xml" />
+    <ElementManifest Location="Sentiment\Elements.xml" />
+    <ElementManifest Location="NewEmployee\Elements.xml" />
+    <ElementManifest Location="WorkflowHistoryList\Elements.xml" />
+    <ElementManifest Location="WorkflowTaskList\Elements.xml" />
+    <ElementManifest Location="ClockInTime\Elements.xml" />
+    <ElementManifest Location="ClockOutTime\Elements.xml" />
+    <ElementManifest Location="Comment\Elements.xml" />
+    <ElementManifest Location="Reporter\Elements.xml" />
+    <ElementManifest Location="WorkDate\Elements.xml" />
+    <ElementManifest Location="InMinute\Elements.xml" />
+    <ElementManifest Location="OutMinute\Elements.xml" />
+    <ElementManifest Location="BreakMinute\Elements.xml" />
+  </ElementManifests>
+  <UpgradeActions>
+    <VersionRange>
+      <ApplyElementManifests>
+        <ElementManifest Location="Pages\Elements.xml" />
+        <ElementManifest Location="Scripts\Elements.xml" />
+        <ElementManifest Location="Content\Elements.xml" />
+        <ElementManifest Location="Images\Elements.xml" />
+        <ElementManifest Location="NewEmployeesInSeattle\Elements.xml" />
+        <ElementManifest Location="NewEmployeeOrientation\Elements.xml" />
+        <ElementManifest Location="Division\Elements.xml" />
+        <ElementManifest Location="Sentiment\Elements.xml" />
+        <ElementManifest Location="NewEmployee\Elements.xml" />
+        <ElementManifest Location="WorkflowHistoryList\Elements.xml" />
+        <ElementManifest Location="WorkflowTaskList\Elements.xml" />
+        <ElementManifest Location="ClockInTime\Elements.xml" />
+        <ElementManifest Location="ClockOutTime\Elements.xml" />
+        <ElementManifest Location="Comment\Elements.xml" />
+        <ElementManifest Location="Reporter\Elements.xml" />
+        <ElementManifest Location="WorkDate\Elements.xml" />
+        <ElementManifest Location="InMinute\Elements.xml" />
+        <ElementManifest Location="OutMinute\Elements.xml" />
+        <ElementManifest Location="BreakMinute\Elements.xml" />
+      </ApplyElementManifests>
+    </VersionRange>
+  </UpgradeActions>
+</Feature>

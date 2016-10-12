@@ -1,0 +1,2 @@
+obj\Debug\Workflow.g.xaml
+obj\Debug\SPAddinTest.Workflows.HR_Intake_Workflow_BeforeInitializeComponentHelper.txt

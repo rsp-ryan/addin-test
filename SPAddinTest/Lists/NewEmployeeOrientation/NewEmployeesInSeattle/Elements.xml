@@ -1,0 +1,54 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Elements xmlns="http://schemas.microsoft.com/sharepoint/">
+  <ListInstance Title="Daily Reports" OnQuickLaunch="TRUE" TemplateType="100" Url="Lists/NewEmployeesInSeattle" Description="日報" Hidden="FALSE">
+    <Data>
+      <Rows>
+        <Row>
+          <Field Name="Reporter">11</Field>
+          <Field Name="WorkDate">2016-10-06 00:00:00</Field>
+          <Field Name="InMinute">500</Field>
+          <Field Name="OutMinute">1070</Field>
+          <Field Name="BreakMinute">90</Field>
+          <Field Name="Comment">開発が進みました</Field>
+          <Field Name="Sentiment">普通</Field>
+        </Row>
+        <Row>
+          <Field Name="Reporter">11</Field>
+          <Field Name="WorkDate">2016-10-11 00:00:00</Field>
+          <Field Name="InMinute">540</Field>
+          <Field Name="OutMinute">1150</Field>
+          <Field Name="BreakMinute">60</Field>
+          <Field Name="Comment">体調が悪いです</Field>
+          <Field Name="Sentiment">良好</Field>
+        </Row>
+        <Row>
+          <Field Name="Reporter">11</Field>
+          <Field Name="WorkDate">2016-10-10 00:00:00</Field>
+          <Field Name="InMinute">550</Field>
+          <Field Name="OutMinute">1080</Field>
+          <Field Name="BreakMinute">60</Field>
+          <Field Name="Comment">部全体MTGがありました。</Field>
+          <Field Name="Sentiment">普通</Field>
+        </Row>
+        <Row>
+          <Field Name="Reporter">11</Field>
+          <Field Name="WorkDate">2016-10-07 00:00:00</Field>
+          <Field Name="InMinute">540</Field>
+          <Field Name="OutMinute">1050</Field>
+          <Field Name="BreakMinute">60</Field>
+          <Field Name="Comment">明日はプロジェクトリリースです</Field>
+          <Field Name="Sentiment">最悪</Field>
+        </Row>
+        <Row>
+          <Field Name="Reporter">11</Field>
+          <Field Name="WorkDate">2016-10-08 00:00:00</Field>
+          <Field Name="InMinute">540</Field>
+          <Field Name="OutMinute">1250</Field>
+          <Field Name="BreakMinute">60</Field>
+          <Field Name="Comment">問題にはまっています。</Field>
+          <Field Name="Sentiment">悪い</Field>
+        </Row>
+      </Rows>
+    </Data>
+  </ListInstance>
+</Elements>

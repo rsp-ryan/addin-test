@@ -1,0 +1,7 @@
+﻿<WorkflowDefinition xmlns="http://schemas.microsoft.com/sharepoint/2012/app/workflow">
+  <Description>My 'HR_Intake' Workflow</Description>
+  <DisplayName>HR_Intake</DisplayName>
+  <Id>71e7f641-a562-4dfd-945a-86eac09278dd</Id>
+  <RestrictAssociationToId>Lists/NewEmployeesInSeattle</RestrictAssociationToId>
+  <RestrictAssociationToType>List</RestrictAssociationToType>
+</WorkflowDefinition>

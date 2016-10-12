@@ -1,0 +1,12 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<ProjectItem Type="Microsoft.VisualStudio.SharePoint.Module" DefaultFile="Elements.xml" SupportedTrustLevels="All" SupportedDeploymentScopes="Web, Site" xmlns="http://schemas.microsoft.com/VisualStudio/2010/SharePointTools/SharePointProjectItemModel">
+  <Files>
+    <ProjectItemFile Source="Elements.xml" Target="Images\" Type="ElementManifest" />
+    <ProjectItemFile Source="AppIcon.png" Target="Images\" Type="ElementFile" />
+    <ProjectItemFile Source="RSP_logo.jpg" Target="Images\" Type="ElementFile" />
+    <ProjectItemFile Source="clockin_active.png" Target="Images\" Type="ElementFile" />
+    <ProjectItemFile Source="clockin_inactive.png" Target="Images\" Type="ElementFile" />
+    <ProjectItemFile Source="clockout_active.png" Target="Images\" Type="ElementFile" />
+    <ProjectItemFile Source="clockout_inactive.png" Target="Images\" Type="ElementFile" />
+  </Files>
+</ProjectItem>

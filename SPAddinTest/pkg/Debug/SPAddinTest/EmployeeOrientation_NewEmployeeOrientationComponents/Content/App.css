@@ -1,0 +1,14 @@
+﻿/* Place custom styles below */
+p {color: green;}
+
+.clockin
+{
+   border:1px solid Blue;
+   //some more styles
+}
+
+.clockout
+{
+   border:1px solid Red;
+   //some more styles
+}

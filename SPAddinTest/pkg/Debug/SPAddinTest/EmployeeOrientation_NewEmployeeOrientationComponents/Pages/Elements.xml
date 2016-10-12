@@ -1,0 +1,37 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Elements xmlns="http://schemas.microsoft.com/sharepoint/">
+  <Module Name="Pages">
+    <File Path="Pages\Default.aspx" Url="Pages/Default.aspx" ReplaceContent="TRUE">
+       <AllUsersWebPart WebPartZoneID="HomePage1" WebPartOrder="1">
+              <![CDATA[
+    <webParts>
+<webPart xmlns="http://schemas.microsoft.com/WebPart/v3">
+    <metaData>
+      <type name="Microsoft.SharePoint.WebPartPages.XsltListViewWebPart, 
+                   Microsoft.SharePoint, Version=15.0.0.0, Culture=neutral, 
+                   PublicKeyToken=71e9bce111e9429c" />
+    </metaData>
+      <data>
+           <properties>
+             <property name="ListUrl">Lists/NewEmployeesInSeattle</property>
+             <property name="IsIncluded">True</property>
+             <property name="NoDefaultStyle">True</property>
+             <property name="Title">日報一覧</property>
+             <property name="PageType">PAGE_NORMALVIEW</property>
+             <property name="Default">False</property>
+             <property name="ViewContentTypeId">0x</property>
+          </properties>
+        </data>
+      </webPart>
+    </webParts>
+  ]]>
+            </AllUsersWebPart>
+
+    </File>
+    <File Path="Pages\Help.aspx" Url="Pages/Help.aspx" ReplaceContent="TRUE" />
+    <File Path="Pages\Settings.aspx" Url="Pages/Settings.aspx" ReplaceContent="TRUE" />
+    <File Path="Pages\Approval.aspx" Url="Pages/Approval.aspx" ReplaceContent="TRUE" />
+    <File Path="Pages\PastReport.aspx" Url="Pages/PastReport.aspx" ReplaceContent="TRUE" />
+    <File Path="Pages\Statistics.aspx" Url="Pages/Statistics.aspx" ReplaceContent="TRUE" />
+  </Module>
+</Elements>

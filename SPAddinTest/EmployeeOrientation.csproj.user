@@ -1,0 +1,19 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="14.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <SharePointSiteUrl>https://dataqutech.sharepoint.com/</SharePointSiteUrl>
+    <WorkflowDebuggingClientSecret>ZFeA+m+IoZezltAfkcSH4N/oTsRnitcayazBXKNocfM=</WorkflowDebuggingClientSecret>
+    <ProjectView>ProjectFiles</ProjectView>
+  </PropertyGroup>
+  <ProjectExtensions>
+    <VisualStudio>
+      <FlavorProperties GUID="{C1CDDADD-2546-481F-9697-4EA41081F2FC}">
+        <ProjectStore>
+          <AppInstancePackageModifiedTime>2016-10-12T09:49:13.8638581Z</AppInstancePackageModifiedTime>
+          <AppInstanceId>76fbfef3-2431-4939-a0ed-71b44eb81b75</AppInstanceId>
+          <IsWorkflowDebuggingEnabled>false</IsWorkflowDebuggingEnabled>
+        </ProjectStore>
+      </FlavorProperties>
+    </VisualStudio>
+  </ProjectExtensions>
+</Project>
